@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>处理结果</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+    .wrap {
+      max-width: 780px;
+      margin: 50px auto;
+      padding: 0 18px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      padding: 28px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .ok {
+      color: #047857;
+    }
+    .bad {
+      color: #b91c1c;
+    }
+    .msg {
+      line-height: 1.8;
+      color: #4b5563;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 12px;
+      padding: 12px 18px;
+    }
+    a.back {
+      display: inline-block;
+      margin-left: 12px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      {% if ok %}
+        <h1 class="ok">处理完成</h1>
+        <div class="msg">{{ message }}</div>
+        <div class="msg">字幕文件：{{ srt_name }}</div>
+        <a class="button" href="/download/{{ srt_name }}">下载 SRT 字幕</a>
+        <a class="back" href="/">继续处理</a>
+      {% else %}
+        <h1 class="bad">处理失败</h1>
+        <div class="msg">{{ message }}</div>
+        <a class="back" href="/">返回重试</a>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

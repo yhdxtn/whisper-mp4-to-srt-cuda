@@ -1,2 +1,4 @@
 openai-whisper
 imageio-ffmpeg
+flask
+yt-dlp

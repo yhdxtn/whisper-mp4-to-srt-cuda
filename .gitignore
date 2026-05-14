@@ -3,15 +3,28 @@
 venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Do not upload media files
-videos/
-audio/
-subtitles/
-models/
+# Local ffmpeg cache
 .ffmpeg_bin/
 
-# Do not upload large model/media files
+# Generated files and large files
+videos/*
+audio/*
+subtitles/*
+uploads/*
+downloads/*
+models/*
+
+!videos/.gitkeep
+!audio/.gitkeep
+!subtitles/.gitkeep
+!uploads/.gitkeep
+!downloads/.gitkeep
+!models/.gitkeep
+
+# Media, subtitles, models
 *.mp4
 *.mkv
 *.avi
@@ -19,16 +32,21 @@ models/
 *.flv
 *.wmv
 *.m4v
+*.webm
 *.mp3
 *.wav
 *.srt
+*.vtt
+*.ass
 *.pt
 *.pth
 *.bin
 *.onnx
+*.ckpt
+*.safetensors
 
-# Editor / system
-.vscode/
-.idea/
+# System and editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/

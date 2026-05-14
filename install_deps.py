@@ -21,10 +21,12 @@ def main():
     run([py, "-m", "pip", "install", "-r", "requirements.txt"])
 
     print("\nInstallation finished.")
-    print("Now check CUDA:")
+    print("Check CUDA:")
     print("  python check_cuda.py")
-    print("\nRun:")
-    print("  python transcribe.py")
+    print("\nCLI:")
+    print("  python transcribe.py --input \"D:\\your_video.mp4\"")
+    print("\nWeb:")
+    print("  python app.py")
 
 
 if __name__ == "__main__":
