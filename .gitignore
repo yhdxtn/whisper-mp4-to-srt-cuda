@@ -1,9 +1,34 @@
+# Python
 .venv/
+venv/
 __pycache__/
 *.pyc
+
+# Do not upload media files
+videos/
 audio/
 subtitles/
-videos/
+models/
+.ffmpeg_bin/
+
+# Do not upload large model/media files
 *.mp4
+*.mkv
+*.avi
+*.mov
+*.flv
+*.wmv
+*.m4v
 *.mp3
 *.wav
+*.srt
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Editor / system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
